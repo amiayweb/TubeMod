@@ -4,6 +4,10 @@
 
 Add:
 
+- UI:
+  - Redesign the popup with category navigation, two-column setting cards, global search and an enabled-settings filter.
+  - Add a saved light/dark theme switch, with dark mode enabled by default.
+
 - General:
   - Choose Auto, 3, 4, 5, or 6 videos per row in desktop grids (issue #156).
   - Hide Livestreams also include livestreams on the Subscriptions Feed

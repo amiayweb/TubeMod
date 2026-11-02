@@ -1,18 +1,34 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <link rel="stylesheet" href="popup.css" />
-  <link rel="icon" type="image/x-icon" href="/icons/icon_128.png" />
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TubeMod settings</title>
+<link rel="stylesheet" href="popup.css">
 </head>
-<html>
-  <body>
-    <div class="title-container">
-      <h1>TubeMod</h1>
-      <h3>Make YouTube your own!</h3>
-    </div>
-
-    <button class="collapsible">General</button>
-    <div class="container" id="general" style="display: none">
+<body>
+<header class="app-header">
+ <a class="brand" href="https://tubemod.dev" target="_blank" rel="noreferrer"><span class="brand-icon" aria-hidden="true">▶</span><span>TubeMod<small>YOUR YOUTUBE. YOUR RULES.</small></span></a>
+ <button id="theme-toggle" class="theme-button" aria-label="Switch to light theme">☀ <span>Light mode</span></button>
+</header>
+<div class="workspace">
+ <aside class="sidebar"><p class="eyebrow">CUSTOMIZE</p><nav aria-label="Settings categories"><button class="category" data-section="section-0"><span>General</span><span class="category-count"></span></button>
+<button class="category" data-section="section-1"><span>Header</span><span class="category-count"></span></button>
+<button class="category" data-section="section-2"><span>Profile Settings</span><span class="category-count"></span></button>
+<button class="category" data-section="section-3"><span>Sidebar</span><span class="category-count"></span></button>
+<button class="category" data-section="section-4"><span>Home</span><span class="category-count"></span></button>
+<button class="category" data-section="section-5"><span>Subscriptions</span><span class="category-count"></span></button>
+<button class="category" data-section="section-6"><span>Playlists</span><span class="category-count"></span></button>
+<button class="category" data-section="section-7"><span>Search</span><span class="category-count"></span></button>
+<button class="category" data-section="section-8"><span>Trending</span><span class="category-count"></span></button>
+<button class="category" data-section="section-9"><span>Channel</span><span class="category-count"></span></button>
+<button class="category" data-section="section-10"><span>Video</span><span class="category-count"></span></button>
+<button class="category" data-section="section-11"><span>Extra Video Options</span><span class="category-count"></span></button>
+<button class="category" data-section="section-12"><span>Downloads</span><span class="category-count"></span></button></nav><div class="sidebar-note">Less noise.<br>More of what you love.</div></aside>
+ <main>
+  <div class="page-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h1 id="page-title">General</h1></div><span class="live-badge">● Changes apply instantly</span></div>
+  <div class="toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="settings-search" type="search" placeholder="Find a setting…" aria-label="Search all settings"></label><button id="active-filter" aria-pressed="false">Enabled <span id="enabled-count">0</span></button></div>
+  <div class="settings-scroll"><section id="section-0" class="settings-section" data-name="General"><h2>General</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="video-columns">Videos Per Row (Desktop Grids)</label>
         <select id="video-columns" name="video-columns">
@@ -28,7 +44,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="scheduled-videos"
+            id="scheduled-videos" aria-label="Hide Scheduled Videos"
             name="scheduled-videos"
           />
           <span class="slider round"></span>
@@ -37,14 +53,14 @@
       <div class="checkbox-container">
         <label for="live-videos">Hide Livestreams</label>
         <label class="switch">
-          <input type="checkbox" id="live-videos" name="live-videos" />
+          <input type="checkbox" id="live-videos" aria-label="Hide Livestreams" name="live-videos" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-previews">Hide Video Previews (on hover)</label>
         <label class="switch">
-          <input type="checkbox" id="video-previews" name="video-previews" />
+          <input type="checkbox" id="video-previews" aria-label="Hide Video Previews (on hover)" name="video-previews" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -53,7 +69,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-thumbnails"
+            id="video-thumbnails" aria-label="Hide Video Thumbnails"
             name="video-thumbnails"
           />
           <span class="slider round"></span>
@@ -64,7 +80,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-thumbnails-blur"
+            id="video-thumbnails-blur" aria-label="Blur Video Thumbnails"
             name="video-thumbnails-blur"
           />
           <span class="slider round"></span>
@@ -73,25 +89,23 @@
       <div class="checkbox-container">
         <label for="lowercase-title">Set Video Titles to lowercase</label>
         <label class="switch">
-          <input type="checkbox" id="lowercase-title" name="lowercase-title" />
+          <input type="checkbox" id="lowercase-title" aria-label="Set Video Titles to lowercase" name="lowercase-title" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-meta-data">Hide Video Views and Posted Time</label>
         <label class="switch">
-          <input type="checkbox" id="video-meta-data" name="video-meta-data" />
+          <input type="checkbox" id="video-meta-data" aria-label="Hide Video Views and Posted Time" name="video-meta-data" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Header</button>
-    <div class="container" id="header" style="display: none">
+    </div></section>
+<section id="section-1" class="settings-section" data-name="Header"><h2>Header</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="logo">Hide YouTube Logo</label>
         <label class="switch">
-          <input type="checkbox" id="logo" name="logo" />
+          <input type="checkbox" id="logo" aria-label="Hide YouTube Logo" name="logo" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -99,7 +113,7 @@
       <div class="checkbox-container">
         <label for="search-bar">Hide Search Bar</label>
         <label class="switch">
-          <input type="checkbox" id="search-bar" name="search-bar" />
+          <input type="checkbox" id="search-bar" aria-label="Hide Search Bar" name="search-bar" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -109,7 +123,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="microphone-search"
+            id="microphone-search" aria-label="Hide Microphone Search Icon"
             name="microphone-search"
           />
           <span class="slider round"></span>
@@ -119,15 +133,15 @@
       <div class="checkbox-container">
         <label for="create">Hide Create Icon</label>
         <label class="switch">
-          <input type="checkbox" id="create" name="create" />
+          <input type="checkbox" id="create" aria-label="Hide Create Icon" name="create" />
           <span class="slider round"></span>
         </label>
       </div>
 
       <div class="checkbox-container">
-        <label for="studio-button"">Add Youtube Studio Icon</label>
+        <label for="studio-button">Add Youtube Studio Icon</label>
         <label class="switch">
-          <input type="checkbox" id="studio-button"" name="studio-button"" />
+          <input type="checkbox" id="studio-button" aria-label="Add Youtube Studio Icon" name="studio-button" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -135,54 +149,40 @@
       <div class="checkbox-container">
         <label for="notifications">Hide Notifications Icon</label>
         <label class="switch">
-          <input type="checkbox" id="notifications" name="notifications" />
+          <input type="checkbox" id="notifications" aria-label="Hide Notifications Icon" name="notifications" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-   <button class="collapsible">Search Results</button>
-    <div class="container" id="search-settings" style="display: none;">
-      <div class="checkbox-container">
-        <label for="search-history-thumbnails">Hide Search History Thumbnails</label>
-        <label class="switch">
-          <input type="checkbox" id="search-history-thumbnails" name="search-history-thumbnails" />
-          <span class="slider round"></span>
-        </label>
-      </div>
-    </div>
-
-    <button class="collapsible">Profile Settings</button>
-    <div class="container" id="profile-settings" style="display: none;">
+    </div></section>
+<section id="section-2" class="settings-section" data-name="Profile Settings"><h2>Profile Settings</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="profile-sign-out">Hide Sign Out Button</label>
         <label class="switch">
-          <input type="checkbox" id="profile-sign-out" name="profile-sign-out" />
+          <input type="checkbox" id="profile-sign-out" aria-label="Hide Sign Out Button" name="profile-sign-out" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Sidebar</button>
-    <div class="container" id="sidebar" style="display: none">
+    </div></section>
+<section id="section-3" class="settings-section" data-name="Sidebar"><h2>Sidebar</h2><div class="settings-grid">
+      <div class="checkbox-container"><label for="youtube-music">Hide YouTube Music (Premium)</label><label class="switch"><input type="checkbox" id="youtube-music" aria-label="Hide YouTube Music (Premium)"><span class="slider round"></span></label></div>
       <div class="checkbox-container">
         <label for="sidebar">Hide Sidebar</label>
         <label class="switch">
-          <input type="checkbox" id="sidebar" name="sidebar" />
+          <input type="checkbox" id="sidebar" aria-label="Hide Sidebar" name="sidebar" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home">Hide Home Page Button</label>
         <label class="switch">
-          <input type="checkbox" id="home" name="home" />
+          <input type="checkbox" id="home" aria-label="Hide Home Page Button" name="home" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="shorts">Hide Shorts Button</label>
         <label class="switch">
-          <input type="checkbox" id="shorts" name="shorts" />
+          <input type="checkbox" id="shorts" aria-label="Hide Shorts Button" name="shorts" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -191,7 +191,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="subscriptions-panel"
+            id="subscriptions-panel" aria-label="Hide Subscriptions Panel"
             name="subscriptions-panel"
           />
           <span class="slider round"></span>
@@ -200,7 +200,7 @@
       <div class="checkbox-container">
         <label for="subscriptions">Hide Subscriptions Button</label>
         <label class="switch">
-          <input type="checkbox" id="subscriptions" name="subscriptions" />
+          <input type="checkbox" id="subscriptions" aria-label="Hide Subscriptions Button" name="subscriptions" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -209,7 +209,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="subscriptions-panel-new-indicator"
+            id="subscriptions-panel-new-indicator" aria-label="Hide Subscribed Channel New Indicator (Blue Dot)"
             name="subscriptions-panel-new-indicator"
           />
           <span class="slider round"></span>
@@ -218,105 +218,105 @@
       <div class="checkbox-container">
         <label for="you-panel">Hide You Panel</label>
         <label class="switch">
-          <input type="checkbox" id="you-panel" name="you-panel" />
+          <input type="checkbox" id="you-panel" aria-label="Hide You Panel" name="you-panel" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="you">Hide You Button</label>
         <label class="switch">
-          <input type="checkbox" id="you" name="you" />
+          <input type="checkbox" id="you" aria-label="Hide You Button" name="you" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="your-channel">Hide Your Channel Button</label>
         <label class="switch">
-          <input type="checkbox" id="your-channel" name="your-channel" />
+          <input type="checkbox" id="your-channel" aria-label="Hide Your Channel Button" name="your-channel" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="history">Hide History Button</label>
         <label class="switch">
-          <input type="checkbox" id="history" name="history" />
+          <input type="checkbox" id="history" aria-label="Hide History Button" name="history" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="playlists">Hide Playlists Button</label>
         <label class="switch">
-          <input type="checkbox" id="playlists" name="playlists" />
+          <input type="checkbox" id="playlists" aria-label="Hide Playlists Button" name="playlists" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="my-videos">Hide Your Videos Button</label>
         <label class="switch">
-          <input type="checkbox" id="my-videos" name="my-videos" />
+          <input type="checkbox" id="my-videos" aria-label="Hide Your Videos Button" name="my-videos" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="courses">Hide Your Courses Button</label>
         <label class="switch">
-          <input type="checkbox" id="courses" name="courses" />
+          <input type="checkbox" id="courses" aria-label="Hide Your Courses Button" name="courses" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="watch-later">Hide Watch Later Button</label>
         <label class="switch">
-          <input type="checkbox" id="watch-later" name="watch-later" />
+          <input type="checkbox" id="watch-later" aria-label="Hide Watch Later Button" name="watch-later" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="liked-videos">Hide Liked Videos Button</label>
         <label class="switch">
-          <input type="checkbox" id="liked-videos" name="liked-videos" />
+          <input type="checkbox" id="liked-videos" aria-label="Hide Liked Videos Button" name="liked-videos" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="transfers">Hide Downloads Button (Premium)</label>
         <label class="switch">
-          <input type="checkbox" id="transfers" name="transfers" />
+          <input type="checkbox" id="transfers" aria-label="Hide Downloads Button (Premium)" name="transfers" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="my-clips">Hide Your Clips Button</label>
         <label class="switch">
-          <input type="checkbox" id="my-clips" name="my-clips" />
+          <input type="checkbox" id="my-clips" aria-label="Hide Your Clips Button" name="my-clips" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="you-show-fewer">Hide Show Fewer Button (You Panel)</label>
         <label class="switch">
-          <input type="checkbox" id="you-show-fewer" name="you-show-fewer" />
+          <input type="checkbox" id="you-show-fewer" aria-label="Hide Show Fewer Button (You Panel)" name="you-show-fewer" />
           <span class="slider round"></span>
         </label>
       </div>
           <div class="checkbox-container">
         <label for="you-show-more">Hide Show More Button (You Panel)</label>
         <label class="switch">
-          <input type="checkbox" id="you-show-more" name="you-show-more" />
+          <input type="checkbox" id="you-show-more" aria-label="Hide Show More Button (You Panel)" name="you-show-more" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="explore-panel">Hide Explore Panel</label>
         <label class="switch">
-          <input type="checkbox" id="explore-panel" name="explore-panel" />
+          <input type="checkbox" id="explore-panel" aria-label="Hide Explore Panel" name="explore-panel" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="youtube-panel">Hide More from Youtube Panel</label>
         <label class="switch">
-          <input type="checkbox" id="youtube-panel" name="youtube-panel" />
+          <input type="checkbox" id="youtube-panel" aria-label="Hide More from Youtube Panel" name="youtube-panel" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -325,7 +325,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="youtube-settings"
+            id="youtube-settings" aria-label="Hide Youtube Settings"
             name="youtube-settings"
           />
           <span class="slider round"></span>
@@ -334,122 +334,118 @@
       <div class="checkbox-container">
         <label for="youtube-footer">Hide Youtube Footer</label>
         <label class="switch">
-          <input type="checkbox" id="youtube-footer" name="youtube-footer" />
+          <input type="checkbox" id="youtube-footer" aria-label="Hide Youtube Footer" name="youtube-footer" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Home</button>
-    <div class="container" id="home-page" style="display: none">
+    </div></section>
+<section id="section-4" class="settings-section" data-name="Home"><h2>Home</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="tabs">Hide Tabs</label>
         <label class="switch">
-          <input type="checkbox" id="tabs" name="tabs" />
+          <input type="checkbox" id="tabs" aria-label="Hide Tabs" name="tabs" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="ads">Hide Sponsored Content (videos and panels)</label>
         <label class="switch">
-          <input type="checkbox" id="ads" name="ads" />
+          <input type="checkbox" id="ads" aria-label="Hide Sponsored Content (videos and panels)" name="ads" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="all-videos">Hide All Videos</label>
         <label class="switch">
-          <input type="checkbox" id="all-videos" name="all-videos" />
+          <input type="checkbox" id="all-videos" aria-label="Hide All Videos" name="all-videos" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="members-only">Hide Members Only Videos</label>
         <label class="switch">
-          <input type="checkbox" id="members-only" name="members-only" />
+          <input type="checkbox" id="members-only" aria-label="Hide Members Only Videos" name="members-only" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-shorts">Hide Shorts</label>
         <label class="switch">
-          <input type="checkbox" id="home-shorts" name="home-shorts" />
+          <input type="checkbox" id="home-shorts" aria-label="Hide Shorts" name="home-shorts" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-posts">Hide Posts</label>
         <label class="switch">
-          <input type="checkbox" id="home-posts" name="home-posts" />
+          <input type="checkbox" id="home-posts" aria-label="Hide Posts" name="home-posts" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-news">Hide Breaking News</label>
         <label class="switch">
-          <input type="checkbox" id="home-news" name="home-news" />
+          <input type="checkbox" id="home-news" aria-label="Hide Breaking News" name="home-news" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-trending">Hide Trending</label>
         <label class="switch">
-          <input type="checkbox" id="home-trending" name="home-trending" />
+          <input type="checkbox" id="home-trending" aria-label="Hide Trending" name="home-trending" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-playables">Hide Playables</label>
         <label class="switch">
-          <input type="checkbox" id="home-playables" name="home-playables" />
+          <input type="checkbox" id="home-playables" aria-label="Hide Playables" name="home-playables" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="home-primetime-movies">Hide Primetime Movies for You</label>
         <label class="switch">
-          <input type="checkbox" id="home-primetime-movies" name="home-primetime-movies" />
+          <input type="checkbox" id="home-primetime-movies" aria-label="Hide Primetime Movies for You" name="home-primetime-movies" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="playlist-mix">Hide Mix Playlists</label>
         <label class="switch">
-          <input type="checkbox" id="playlist-mix" name="playlist-mix" />
+          <input type="checkbox" id="playlist-mix" aria-label="Hide Mix Playlists" name="playlist-mix" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="podcast-playlist">Hide Podcasts Playlists</label>
         <label class="switch">
-          <input type="checkbox" id="podcast-playlist" name="podcast-playlist" />
+          <input type="checkbox" id="podcast-playlist" aria-label="Hide Podcasts Playlists" name="podcast-playlist" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="viewed-videos">Hide Already Viewed Videos</label>
         <label class="switch">
-          <input type="checkbox" id="viewed-videos" name="viewed-videos" />
+          <input type="checkbox" id="viewed-videos" aria-label="Hide Already Viewed Videos" name="viewed-videos" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="partially-viewed-videos">Hide Partially Viewed Videos</label>
         <label class="switch">
-          <input type="checkbox" id="partially-viewed-videos" name="partially-viewed-videos" />
+          <input type="checkbox" id="partially-viewed-videos" aria-label="Hide Partially Viewed Videos" name="partially-viewed-videos" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Subscriptions</button>
-    <div class="container" id="subscriptions" style="display: none">
+    </div></section>
+<section id="section-5" class="settings-section" data-name="Subscriptions"><h2>Subscriptions</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="subscriptions-most-relevant">Hide Most Relevant</label>
         <label class="switch">
           <input
             type="checkbox"
-            id="subscriptions-most-relevant"
+            id="subscriptions-most-relevant" aria-label="Hide Most Relevant"
             name="subscriptions-most-relevant"
           />
           <span class="slider round"></span>
@@ -460,22 +456,20 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="subscriptions-shorts"
+            id="subscriptions-shorts" aria-label="Hide Shorts"
             name="subscriptions-shorts"
           />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Playlists</button>
-    <div class="container" id="playlists" style="display: none">
+    </div></section>
+<section id="section-6" class="settings-section" data-name="Playlists"><h2>Playlists</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="playlists-watch-later">Hide Watch Later Playlist</label>
         <label class="switch">
           <input
             type="checkbox"
-            id="playlists-watch-later"
+            id="playlists-watch-later" aria-label="Hide Watch Later Playlist"
             name="playlists-watch-later"
           />
           <span class="slider round"></span>
@@ -486,76 +480,74 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="playlists-liked-videos"
+            id="playlists-liked-videos" aria-label="Hide Liked Videos Playlist"
             name="playlists-liked-videos"
           />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-
-    <button class="collapsible">Search</button>
-    <div class="container" id="search" style="display: none;">
+    </div></section>
+<section id="section-7" class="settings-section" data-name="Search"><h2>Search</h2><div class="settings-grid">
+      <div class="checkbox-container">
+        <label for="search-history-thumbnails">Hide Search History Thumbnails</label>
+        <label class="switch">
+          <input type="checkbox" id="search-history-thumbnails" aria-label="Hide Search History Thumbnails" name="search-history-thumbnails" />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <div class="checkbox-container">
         <label for="search-shorts">Hide Shorts</label>
         <label class="switch">
-          <input type="checkbox" id="search-shorts" name="search-shorts" />
+          <input type="checkbox" id="search-shorts" aria-label="Hide Shorts" name="search-shorts" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="search-people-also-searched">Hide 'People Also Search For' Section</label>
         <label class="switch">
-          <input type="checkbox" id="search-people-also-searched" name="search-people-also-searched" />
+          <input type="checkbox" id="search-people-also-searched" aria-label="Hide &#x27;People Also Search For&#x27; Section" name="search-people-also-searched" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Trending</button>
-    <div class="container" id="search" style="display: none;">
+    </div></section>
+<section id="section-8" class="settings-section" data-name="Trending"><h2>Trending</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="trending-shorts">Hide Shorts</label>
         <label class="switch">
-          <input type="checkbox" id="trending-shorts" name="trending-shorts" />
+          <input type="checkbox" id="trending-shorts" aria-label="Hide Shorts" name="trending-shorts" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Channel</button>
-    <div class="container" id="search" style="display: none;">
+    </div></section>
+<section id="section-9" class="settings-section" data-name="Channel"><h2>Channel</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="channel-trailer">Pause Channel Trailer</label>
         <label class="switch">
-          <input type="checkbox" id="channel-trailer" name="channel-trailer" />
+          <input type="checkbox" id="channel-trailer" aria-label="Pause Channel Trailer" name="channel-trailer" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Video</button>
-    <div class="container" id="video" style="display: none">
+    </div></section>
+<section id="section-10" class="settings-section" data-name="Video"><h2>Video</h2><div class="settings-grid">
 
       <div class="checkbox-container">
         <label for="video-progress-bar-dot">[Progress Bar] Hide Dot</label>
         <label class="switch">
-          <input type="checkbox" id="video-progress-bar-dot" name="video-progress-bar-dot" />
+          <input type="checkbox" id="video-progress-bar-dot" aria-label="[Progress Bar] Hide Dot" name="video-progress-bar-dot" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-settings-playback-speed">[Video Settings] Hide Playback Speed Option</label>
         <label class="switch">
-          <input type="checkbox" id="video-settings-playback-speed" name="video-settings-playback-speed" />
+          <input type="checkbox" id="video-settings-playback-speed" aria-label="[Video Settings] Hide Playback Speed Option" name="video-settings-playback-speed" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-settings-sleep-timer">[Video Settings] Hide Sleep Timer Option</label>
         <label class="switch">
-          <input type="checkbox" id="video-settings-sleep-timer" name="video-settings-sleep-timer" />
+          <input type="checkbox" id="video-settings-sleep-timer" aria-label="[Video Settings] Hide Sleep Timer Option" name="video-settings-sleep-timer" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -566,7 +558,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-suggestion-wall"
+            id="video-suggestion-wall" aria-label="Hide Suggestion Wall (End of the Video)"
             name="video-suggestion-wall"
           />
           <span class="slider round"></span>
@@ -576,7 +568,7 @@
       <div class="checkbox-container">
         <label for="video-title">Hide Title</label>
         <label class="switch">
-          <input type="checkbox" id="video-title" name="video-title" />
+          <input type="checkbox" id="video-title" aria-label="Hide Title" name="video-title" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -585,7 +577,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-subscribers"
+            id="video-subscribers" aria-label="Hide Subscribers Count"
             name="video-subscribers"
           />
           <span class="slider round"></span>
@@ -596,7 +588,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-subscribe-button"
+            id="video-subscribe-button" aria-label="Hide Subscribe Button"
             name="video-subscribe-button"
           />
           <span class="slider round"></span>
@@ -607,7 +599,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-subscribed-button"
+            id="video-subscribed-button" aria-label="Hide Subscribed Button"
             name="video-subscribed-button"
           />
           <span class="slider round"></span>
@@ -618,7 +610,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-join-button"
+            id="video-join-button" aria-label="Hide Join Button"
             name="video-join-button"
           />
           <span class="slider round"></span>
@@ -629,7 +621,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-likes-dislikes"
+            id="video-likes-dislikes" aria-label="Hide Likes/Dislikes Buttons"
             name="video-likes-dislikes"
           />
           <span class="slider round"></span>
@@ -638,14 +630,14 @@
       <div class="checkbox-container">
         <label for="video-share">Hide Share Video Button</label>
         <label class="switch">
-          <input type="checkbox" id="video-share" name="video-share" />
+          <input type="checkbox" id="video-share" aria-label="Hide Share Video Button" name="video-share" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-download">Hide Download Button</label>
         <label class="switch">
-          <input type="checkbox" id="video-download" name="video-download" />
+          <input type="checkbox" id="video-download" aria-label="Hide Download Button" name="video-download" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -656,7 +648,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-thanks"
+            id="video-thanks" aria-label="Hide Thanks Button"
             name="video-thanks"
           />
           <span class="slider round"></span>
@@ -669,7 +661,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-clip"
+            id="video-clip" aria-label="Hide Clip Button"
             name="video-clip"
           />
           <span class="slider round"></span>
@@ -682,7 +674,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-save"
+            id="video-save" aria-label="Hide Save Button"
             name="video-save"
           />
           <span class="slider round"></span>
@@ -695,7 +687,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-collapsed-buttons"
+            id="video-collapsed-buttons" aria-label="Hide Collapsed Actions Button (...)"
             name="video-collapsed-buttons"
           />
           <span class="slider round"></span>
@@ -708,7 +700,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="stream-show-chat"
+            id="stream-show-chat" aria-label="Hide Show Chat (Live Streams)"
             name="stream-show-chat"
           />
           <span class="slider round"></span>
@@ -719,7 +711,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-description"
+            id="video-description" aria-label="Hide Description"
             name="video-description"
           />
           <span class="slider round"></span>
@@ -728,7 +720,7 @@
       <div class="checkbox-container">
         <label for="video-views">Hide Views Count</label>
         <label class="switch">
-          <input type="checkbox" id="video-views" name="video-views" />
+          <input type="checkbox" id="video-views" aria-label="Hide Views Count" name="video-views" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -739,7 +731,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-people-mentioned-description"
+            id="video-people-mentioned-description" aria-label="Hide People Mentioned in Video Description"
             name="video-people-mentioned-description"
           />
           <span class="slider round"></span>
@@ -752,7 +744,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-chapters-description"
+            id="video-chapters-description" aria-label="Hide Chapters in Video Description"
             name="video-chapters-description"
           />
           <span class="slider round"></span>
@@ -765,7 +757,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-shorts-description"
+            id="video-shorts-description" aria-label="Hide Shorts in Video Description"
             name="video-shorts-description"
           />
           <span class="slider round"></span>
@@ -778,7 +770,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-transcription-description"
+            id="video-transcription-description" aria-label="Hide Transcription in Video Description"
             name="video-transcription-description"
           />
           <span class="slider round"></span>
@@ -791,20 +783,20 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-channel-links-description"
+            id="video-channel-links-description" aria-label="Hide Channel Links in Video Description"
             name="video-channel-links-description"
           />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
-        <label for="video-live-chat-replay""
+        <label for="video-live-chat-replay"
           >Hide Video Live Chat Replay</label
         >
         <label class="switch">
           <input
             type="checkbox"
-            id="video-live-chat-replay"
+            id="video-live-chat-replay" aria-label="Hide Video Live Chat Replay"
             name="video-live-chat-replay"
           />
           <span class="slider round"></span>
@@ -817,7 +809,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-summary-ai-generated"
+            id="video-summary-ai-generated" aria-label="Hide AI-generated Video Summary"
             name="video-summary-ai-generated"
           />
           <span class="slider round"></span>
@@ -828,7 +820,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-categories-games"
+            id="video-categories-games" aria-label="Hide Categories/Games"
             name="video-categories-games"
           />
           <span class="slider round"></span>
@@ -837,42 +829,42 @@
       <div class="checkbox-container">
         <label for="video-comments">Hide Comments</label>
         <label class="switch">
-          <input type="checkbox" id="video-comments" name="video-comments" />
+          <input type="checkbox" id="video-comments" aria-label="Hide Comments" name="video-comments" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-comments-avatars">Hide Comments Avatars</label>
         <label class="switch">
-          <input type="checkbox" id="video-comments-avatars" name="video-comments-avatars" />
+          <input type="checkbox" id="video-comments-avatars" aria-label="Hide Comments Avatars" name="video-comments-avatars" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-comments-replies">Hide Comments Replies</label>
         <label class="switch">
-          <input type="checkbox" id="video-comments-replies" name="video-comments-replies" />
+          <input type="checkbox" id="video-comments-replies" aria-label="Hide Comments Replies" name="video-comments-replies" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-ads">Hide Ads Panel</label>
         <label class="switch">
-          <input type="checkbox" id="video-ads" name="video-ads" />
+          <input type="checkbox" id="video-ads" aria-label="Hide Ads Panel" name="video-ads" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-offer-module">Hide Offer Module</label>
         <label class="switch">
-          <input type="checkbox" id="video-offer-module" name="video-offer-module" />
+          <input type="checkbox" id="video-offer-module" aria-label="Hide Offer Module" name="video-offer-module" />
           <span class="slider round"></span>
         </label>
       </div>
       <div class="checkbox-container">
         <label for="video-tabs">Hide Suggested Videos Tabs</label>
         <label class="switch">
-          <input type="checkbox" id="video-tabs" name="video-tabs" />
+          <input type="checkbox" id="video-tabs" aria-label="Hide Suggested Videos Tabs" name="video-tabs" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -881,7 +873,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-suggested-videos"
+            id="video-suggested-videos" aria-label="Hide Suggested Videos"
             name="video-suggested-videos"
           />
           <span class="slider round"></span>
@@ -890,7 +882,7 @@
       <div class="checkbox-container">
         <label for="video-center-player" title="Centers the player, description and comments when suggested videos are hidden in the standard desktop view. Playlist panels and live chat remain available below the video.">Center Video Player<br>(When Suggestions Are Hidden)</label>
         <label class="switch">
-          <input type="checkbox" id="video-center-player" name="video-center-player" />
+          <input type="checkbox" id="video-center-player" aria-label="Center Video Player (When Suggestions Are Hidden)" name="video-center-player" />
           <span class="slider round"></span>
         </label>
       </div>
@@ -899,7 +891,7 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-suggested-videos-new-badge"
+            id="video-suggested-videos-new-badge" aria-label="Hide Suggested Videos New Badge"
             name="video-suggested-videos-new-badge"
           />
           <span class="slider round"></span>
@@ -910,22 +902,20 @@
         <label class="switch">
           <input
             type="checkbox"
-            id="video-suggested-shorts"
+            id="video-suggested-shorts" aria-label="Hide Suggested Videos Shorts"
             name="video-suggested-shorts"
           />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Extra Video Options</button>
-    <div class="container" id="extra-video" style="display: none">
+    </div></section>
+<section id="section-11" class="settings-section" data-name="Extra Video Options"><h2>Extra Video Options</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="youtube-progress-bar">Remove Video Progress Bar Gradient</label>
         <label class="switch">
           <input
             type="checkbox"
-            id="youtube-progress-bar"
+            id="youtube-progress-bar" aria-label="Remove Video Progress Bar Gradient"
             name="youtube-progress-bar"
           />
           <span class="slider round"></span>
@@ -934,53 +924,27 @@
       <div class="checkbox-container">
         <label for="video-thumbnail">Show Thumbnail Next To Video Player</label>
         <label class="switch">
-          <input type="checkbox" id="video-thumbnail" name="video-thumbnail" />
+          <input type="checkbox" id="video-thumbnail" aria-label="Show Thumbnail Next To Video Player" name="video-thumbnail" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <button class="collapsible">Downloads</button>
-    <div class="container" id="downloads" style="display: none">
+    </div></section>
+<section id="section-12" class="settings-section" data-name="Downloads"><h2>Downloads</h2><div class="settings-grid">
       <div class="checkbox-container">
         <label for="download-badge">Hide Downloaded Badge in Downloads</label>
         <label class="switch">
-          <input type="checkbox" id="download-badge" name="download-badge" />
+          <input type="checkbox" id="download-badge" aria-label="Hide Downloaded Badge in Downloads" name="download-badge" />
           <span class="slider round"></span>
         </label>
       </div>
-    </div>
-
-    <div class="btn-settings-container">
-      <button class="button">
-        <a href="https://ko-fi.com/pedrogregorio" target="_blank"
-          >Buy me a Coffee</a
-        >
-      </button>
-      <button class="button">
-        <a
-          href="mailto:pedro-gregorio@outlook.pt?subject=TubeMod%20Feedback"
-          target="_blank"
-          >Send Feedback</a
-        >
-      </button>
-    </div>
-    <div class="btn-settings-container">
-      <label class="button" for="import-settings">Import Settings</label>
-      <input id="import-settings" type="file" accept=".json" hidden>
-      <button class="button" id="save-settings">Export Settings</button>   
-      <button class="button" id="reset-settings">Reset Settings</button>
-    </div>
-
-    <p class="version">
-      Current Version __VERSION__ |
-      <a
-        href="https://github.com/Pedro-Gregorio/TubeMod/blob/master/documentation/ReleaseNotes.md"
-        target="_blank"
-        >Release Notes</a
-      >
-    </p>
-
-    <script src="../scripts/popup.js"></script>
-  </body>
+    </div></section><p id="empty-state" hidden>No settings found. Try another search or turn off the Enabled filter.</p></div>
+  <p id="status" role="status" aria-live="polite"></p>
+ </main>
+</div>
+<footer>
+ <div class="settings-actions"><label class="text-button" for="import-settings" tabindex="0" role="button" id="import-trigger">Import</label><input id="import-settings" type="file" accept=".json" hidden><button id="save-settings">Export</button><button id="reset-settings">Reset</button></div>
+ <div class="footer-links"><a href="https://ko-fi.com/pedrogregorio" target="_blank" rel="noreferrer">Support ↗</a><a href="mailto:pedro-gregorio@outlook.pt?subject=TubeMod%20Feedback">Feedback</a><a href="https://github.com/Pedro-Gregorio/TubeMod/blob/master/documentation/ReleaseNotes.md" target="_blank" rel="noreferrer" aria-label="Release notes">v__VERSION__ ↗</a></div>
+</footer>
+<script src="../scripts/popup.js"></script>
+</body>
 </html>
